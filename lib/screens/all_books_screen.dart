@@ -6,6 +6,7 @@ import './add_books_screen.dart';
 import '../widgets/book_item.dart';
 
 class AllBooksScreen extends StatefulWidget {
+  static const routeName = '/all_books';
   @override
   _AllBooksScreenState createState() => _AllBooksScreenState();
 }

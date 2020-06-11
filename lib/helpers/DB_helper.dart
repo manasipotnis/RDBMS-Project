@@ -36,7 +36,7 @@ class DBHelper {
   }
 
   Future _onCreate(Database db, int version) async {
-    print('CREATING THE TABLE WOOHOO');
+    
     await db.execute('''
           CREATE TABLE $table (
             $columnId TEXT PRIMARY KEY,

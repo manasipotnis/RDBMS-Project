@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rdbms_project/screens/edit_book_screen.dart';
+import 'package:rdbms_project/screens/first_screen.dart';
 
 import './screens/add_books_screen.dart';
 import './screens/all_books_screen.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.deepOrangeAccent,
         ),
         routes: {
-          '/': (ctx) => AllBooksScreen(),
+          '/': (ctx) => FirstScreen(),
+          AllBooksScreen.routeName: (ctx)=> AllBooksScreen(),
           AddBookScreen.routeName: (ctx) => AddBookScreen(),
           EditBookScreen.routeName: (ctx) => EditBookScreen(),
         },

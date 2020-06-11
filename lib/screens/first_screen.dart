@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//import '../screens/all_books_screen.dart';
+import '../screens/all_books_screen.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -18,19 +18,12 @@ class FirstScreen extends StatelessWidget {
               color: Theme.of(context).accentColor,
               child: Text('All Books'),
               onPressed: () {
-                //Navigator.of(context).pushNamed(AllBooksScreen.routeName);
+                Navigator.of(context).pushNamed(AllBooksScreen.routeName);
               },
             ),
           ),
           Image.network(circularBooksUrl),
-          SizedBox(
-            width: 200,
-            child: RaisedButton(
-              color: Theme.of(context).accentColor,
-              child: Text('Add new Book'),
-              onPressed: () {},
-            ),
-          ),
+         
         ],
       ),
     );
