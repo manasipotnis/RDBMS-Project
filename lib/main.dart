@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.yellow,
-          primaryColor: Colors.black,
-          accentColor: Colors.deepOrangeAccent,
+          scaffoldBackgroundColor: Colors.white,
+          primaryColor: Colors.red,
+          accentColor: Colors.redAccent,
         ),
         routes: {
           '/': (ctx) => FirstScreen(),

@@ -73,9 +73,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
                     id: DateTime.now().toString(),
                     title: val,
                     author: newBook.author,
-                    //authorLname: newBook.authorLname,
                     genre: newBook.genre,
-                    //finishedReading: newBook.finishedReading,
                   );
                 },
                 validator: (val) {
@@ -99,9 +97,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
                     id: DateTime.now().toString(),
                     title: newBook.title,
                     author: val,
-                    //authorLname: newBook.authorLname,
                     genre: newBook.genre,
-                    //finishedReading: newBook.finishedReading,
                   );
                 },
                 validator: (val) {
@@ -111,32 +107,6 @@ class _AddBookScreenState extends State<AddBookScreen> {
                   return null;
                 },
               ),
-
-              // TextFormField(
-              //   focusNode: _aLNFocusNode,
-              //   decoration: InputDecoration(labelText: 'Author Last Name'),
-              //   textCapitalization: TextCapitalization.words,
-              //   textInputAction: TextInputAction.next,
-              //   onFieldSubmitted: (val) {
-              //     FocusScope.of(context).requestFocus(_genreFocusNode);
-              //   },
-              //   onSaved: (val) {
-              //     newBook = Book(
-              //       id: DateTime.now().toString(),
-              //       title: newBook.title,
-              //       authorFname: newBook.authorFname,
-              //       //authorLname: val,
-              //       genre: newBook.genre,
-              //       //finishedReading: newBook.finishedReading,
-              //     );
-              //   },
-              //   validator: (val) {
-              //     if (val.isEmpty) {
-              //       return 'Enter a valid last name';
-              //     }
-              //     return null;
-              //   },
-              // ),
               SizedBox(height: 20),
               TextFormField(
                 focusNode: _genreFocusNode,
@@ -161,44 +131,13 @@ class _AddBookScreenState extends State<AddBookScreen> {
                 },
               ),
               SizedBox(height: 20),
-              // FlatButton.icon(
-              //   onPressed: () async {
-              //     await showDatePicker(
-              //       context: context,
-              //       initialDate: DateTime.now(),
-              //       firstDate: DateTime(2000, 1),
-              //       lastDate: DateTime.now(),
-              //     ).then((chosenDate) {
-              //       if (chosenDate == null) {
-              //         return;
-              //       }
-              //       setState(() {
-              //         _selectedDate = chosenDate;
-              //       });
-              //     });
-              //   },
-              //   icon: Icon(Icons.calendar_today),
-              //   label: Text('Pick Date'),
-              // ),
-              // SizedBox(
-              //   height: 20,
-              // ),
-              // Center(
-              //   child: Container(
-              //     margin: EdgeInsets.all(10),
-              //     padding: const EdgeInsets.all(10),
-              //     decoration: BoxDecoration(border: Border.all(width: 2)),
-              //     child: _selectedDate == null
-              //         ? Text('No date chosen')
-              //         : Text(
-              //             DateFormat.yMMMMEEEEd().format(_selectedDate),
-              //           ),
-              //   ),
-              // ),
               SizedBox(
                 height: 20,
               ),
               RaisedButton(
+                color: Theme.of(context).primaryColor,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25)),
                 child: Text('Add Book'),
                 onPressed: () {
                   _saveForm();
